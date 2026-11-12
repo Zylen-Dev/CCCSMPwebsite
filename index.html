@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCCSMP | Minecraft Server</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #101510;
+    color: #e8eee8;
+}
+header {
+    background: #17251a;
+    padding: 22px;
+    text-align: center;
+    border-bottom: 2px solid #4caf50;
+}
+header h1 { margin: 0; font-size: 36px; }
+header p { color: #a9c5aa; }
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: #1b241c;
+}
+nav button {
+    background: #263b29;
+    color: white;
+    border: 1px solid #4caf50;
+    padding: 11px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+nav button:hover { background: #397b40; }
+main {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 20px;
+}
+section {
+    background: #19231a;
+    border: 1px solid #304a33;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+h2 { color: #78d47d; }
+.server {
+    background: #263b29;
+    padding: 18px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+.copy {
+    background: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    background: #101810;
+    color: white;
+    border: 1px solid #527455;
+    border-radius: 6px;
+}
+label { display: block; }
+.page { display: none; }
+.page.active { display: block; }
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #91a391;
+}
+li { margin: 9px 0; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>🌿 CCCSMP</h1>
+<p>Survive. Build. Fight. Make your mark.</p>
+</header>
+
+<nav>
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('join')">How to Join</button>
+<button onclick="showPage('rules')">Rules</button>
+<button onclick="showPage('support')">Support</button>
+<button onclick="showPage('staff')">Staff Applications</button>
+<button onclick="showPage('faq')">FAQ</button>
+</nav>
+
+<main>
+
+<div id="home" class="page active">
+<section>
+<h2>Welcome to CCCSMP</h2>
+<p>Welcome to CCCSMP, a Minecraft survival server where you can build, explore, fight and create your own story.</p>
+<p>Make alliances, protect your base and survive against other players.</p>
+</section>
+<section>
+<h2>Server Information</h2>
+<div class="server">
+<p><b>Version:</b> 1.26.3</p>
+<p><b>Server IP:</b> cccsmp.apect.host</p>
+<p><b>Port:</b> 19132</p>
+<button class="copy" onclick="copyText('cccsmp.apect.host')">Copy IP</button>
+</div>
+</section>
+</div>
+
+<div id="join" class="page">
+<section>
+<h2>How to Join CCCSMP</h2>
+<h3>Java Edition</h3>
+<ol>
+<li>Open Minecraft Java Edition.</li>
+<li>Make sure you are using version 1.26.3.</li>
+<li>Click Multiplayer.</li>
+<li>Click Add Server.</li>
+<li>Enter CCCSMP as the server name.</li>
+<li>Enter the server address: cccsmp.apect.host</li>
+<li>Click Done, select the server and click Join Server.</li>
+</ol>
+<h3>Bedrock Edition</h3>
+<ol>
+<li>Open Minecraft Bedrock Edition.</li>
+<li>Go to the Servers tab.</li>
+<li>Scroll down and select Add Server.</li>
+<li>Enter CCCSMP as the server name.</li>
+<li>Enter cccsmp.apect.host as the address.</li>
+<li>Enter port 19132.</li>
+<li>Save and connect.</li>
+</ol>
+<p><b>Having trouble?</b> Check your version and server address. Java and Bedrock may require different connection settings.</p>
+</section>
+</div>
+
+<div id="rules" class="page">
+<section>
+<h2>CCCSMP Rules</h2>
+<h3>1. Gameplay</h3>
+<ul>
+<li>Griefing, stealing, raiding and PvP are allowed.</li>
+<li>Trapping and betrayal are allowed.</li>
+<li>Alliances and rivalries are encouraged.</li>
+<li>No refunds for lost or destroyed items.</li>
+</ul>
+<h3>2. Cheating</h3>
+<ul>
+<li>No X-ray or hacked clients.</li>
+<li>No KillAura, Reach, AimAssist or autoclickers.</li>
+<li>No macros or unfair exploits.</li>
+<li>No duping unless staff explicitly permits it.</li>
+<li>No server-crashing or lag exploits.</li>
+</ul>
+<h3>3. Mods</h3>
+<ul>
+<li>Performance mods are allowed.</li>
+<li>Sodium, Lithium, FerriteCore and shaders are allowed.</li>
+<li>Minimaps are allowed.</li>
+<li>Fullbright requires staff permission.</li>
+<li>X-ray resource packs are prohibited.</li>
+</ul>
+<h3>4. Chat</h3>
+<ul>
+<li>No doxxing or sharing personal information.</li>
+<li>No real-life threats or targeted harassment.</li>
+<li>No excessive spam or staff impersonation.</li>
+<li>Keep arguments in-game.</li>
+</ul>
+<h3>5. Server Integrity</h3>
+<ul>
+<li>No intentional server crashing.</li>
+<li>No lag machines designed to overload the server.</li>
+<li>No plugin exploits or ban evasion.</li>
+<li>Do not interfere with server administration.</li>
+</ul>
+<h3>6. Staff Enforcement</h3>
+<p>Staff may investigate suspected cheating, request removal of prohibited mods, issue warnings, temporary mutes or bans, and permanent bans for serious offences. Punishments depend on evidence and severity.</p>
+<h3>Remember</h3>
+<p><b>Griefing is part of the game. Cheating is not.</b></p>
+<p>Play fair. Survive. Don't get caught lacking.</p>
+</section>
+</div>
+
+<div id="support" class="page">
+<section>
+<h2>Player Support</h2>
+<p>Need help? Complete this form to create a message you can copy and send to a server administrator.</p>
+<label>Minecraft username</label>
+<input id="supportName" placeholder="Your username">
+<label>Issue category</label>
+<select id="supportCategory">
+<option>Technical problem</option>
+<option>Player report</option>
+<option>Bug report</option>
+<option>Ban appeal</option>
+<option>Other</option>
+</select>
+<label>Explain your issue</label>
+<textarea id="supportMessage" rows="5" placeholder="Describe what happened..."></textarea>
+<button class="copy" onclick="makeSupport()">Create support message</button>
+<pre id="supportResult"></pre>
+</section>
+</div>
+
+<div id="staff" class="page">
+<section>
+<h2>Staff Applications</h2>
+<p>Interested in helping run CCCSMP? Complete this application.</p>
+<label>Minecraft username</label>
+<input id="staffName" placeholder="Your username">
+<label>Age</label>
+<input id="staffAge" type="number" placeholder="Your age">
+<label>Position</label>
+<select id="staffRole">
+<option>Moderator</option>
+<option>Helper</option>
+<option>Builder</option>
+<option>Administrator</option>
+</select>
+<label>Why should we choose you?</label>
+<textarea id="staffWhy" rows="4"></textarea>
+<label>Previous experience</label>
+<textarea id="staffExperience" rows="4"></textarea>
+<button class="copy" onclick="makeApplication()">Create application</button>
+<pre id="staffResult"></pre>
+</section>
+</div>
+
+<div id="faq" class="page">
+<section>
+<h2>Frequently Asked Questions</h2>
+<details><summary>What version is the server?</summary><p>CCCSMP uses Minecraft 1.26.3.</p></details>
+<details><summary>Can I raid other players?</summary><p>Yes. Raiding and griefing are allowed.</p></details>
+<details><summary>Can I use mods?</summary><p>Performance mods are allowed, but cheating mods are prohibited.</p></details>
+<details><summary>Will I get my items back if I am raided?</summary><p>No. There are no refunds for normal gameplay losses.</p></details>
+<details><summary>How do I apply for staff?</summary><p>Use the Staff Applications page.</p></details>
+</section>
+</div>
+
+</main>
+
+<footer>
+<p>CCCSMP Minecraft Server</p>
+<p>Play fair. Survive. Don't get caught lacking.</p>
+</footer>
+
+<script>
+function showPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(page).classList.add('active');
+    window.scrollTo(0, 0);
+}
+
+function copyText(text) {
+    navigator.clipboard.writeText(text)
+        .then(() => alert('Copied!'))
+        .catch(() => alert('Copy failed. Please copy manually: ' + text));
+}
+
+function makeSupport() {
+    const result =
+`CCCSMP SUPPORT REQUEST
+Username: ${document.getElementById('supportName').value}
+Category: ${document.getElementById('supportCategory').value}
+Issue: ${document.getElementById('supportMessage').value}`;
+    document.getElementById('supportResult').textContent = result;
+    copyText(result);
+}
+
+function makeApplication() {
+    const result =
+`CCCSMP STAFF APPLICATION
+Username: ${document.getElementById('staffName').value}
+Age: ${document.getElementById('staffAge').value}
+Position: ${document.getElementById('staffRole').value}
+Why choose me: ${document.getElementById('staffWhy').value}
+Experience: ${document.getElementById('staffExperience').value}`;
+    document.getElementById('staffResult').textContent = result;
+    copyText(result);
+}
+</script>
+
+</body>
+</html>
